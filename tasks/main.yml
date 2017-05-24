@@ -1,0 +1,32 @@
+---
+# tasks file for pbis-ansible-role
+- name: Set fact for repo open
+  set_fact:
+    "pbis_repo_name": "pbiso"
+  when: enterprise is false
+
+- name: Set fact for package name (open only)
+  set_fact:
+    "pbis_package_name": "pbis-open"
+  when: enterprise is false
+
+- name: Set fact for repo description
+  set_fact: 
+    "pbis_repo_description": "PBIS Open"
+  when: enterprsie is false 
+
+- name: Ensure YUM repo exists
+  become: yes
+  yum_repository:
+    name: "{{ pbis_repo_name }}"
+    description: "{{ pbis_repo_description }}"
+    baseurl: "http://repo.pbis.beyondtrust.com/yum/{{ pbis_repo_name}}/$basearch"
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: "http://repo.pbis.beyondtrust.com/yum/RPM-GPG-KEY.pbis"
+
+- name: Ensure {{ pbis_repo_description }} is installed
+  become: yes
+  yum:
+    name: "{{ pbis_package_name }}"
+    state: latest
