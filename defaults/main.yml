@@ -6,7 +6,7 @@
 "pbis_repo_name": "pbise"
 
 # enterprise = pbis-enterprise, open = pbis-open
-"pbis_package_name": "pbis-enteprise"
+"pbis_package_name": "pbis-enterprise"
 
 # enterprise = "PBIS Enterprise", open = "PBIS Open"
-"pbis_repo_description": "PBIS Enteprise"
+"pbis_repo_description": "PBIS Enterprise"
