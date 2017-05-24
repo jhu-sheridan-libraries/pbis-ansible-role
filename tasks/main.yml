@@ -3,17 +3,17 @@
 - name: Set fact for repo open
   set_fact:
     "pbis_repo_name": "pbiso"
-  when: enterprise is false
+  when: is_enterprise == 'false'
 
 - name: Set fact for package name (open only)
   set_fact:
     "pbis_package_name": "pbis-open"
-  when: enterprise is false
+  when: is_enterprise == 'false'
 
 - name: Set fact for repo description
   set_fact: 
     "pbis_repo_description": "PBIS Open"
-  when: enterprsie is false 
+  when: is_enterprise == 'false'
 
 - name: Ensure YUM repo exists
   become: yes

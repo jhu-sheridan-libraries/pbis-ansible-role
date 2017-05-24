@@ -1,6 +1,6 @@
 ---
 # defaults file for pbis-ansible-role
-"enterprise": yes
+"is_enterprise": yes
 
 # enterprise = pbise, open = pbiso
 "pbis_repo_name": "pbise"
