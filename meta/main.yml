@@ -34,13 +34,7 @@ galaxy_info:
   #   - 99.99
 
   platforms:
-    - name: CentOS
-      versions:
-      - 7
-    - name: RedHat
-      versions:
-      - 7
-
+    - Centos 7
   galaxy_tags: 
     - "pbis"
     - "powerbroker identity services"
