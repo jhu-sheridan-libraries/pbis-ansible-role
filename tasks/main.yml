@@ -23,7 +23,7 @@
     baseurl: "http://repo.pbis.beyondtrust.com/yum/{{ pbis_repo_name}}/$basearch"
     enabled: yes
     gpgcheck: yes
-    gpgkey: "http://repo.pbis.beyondtrust.com/yum/RPM-GPG-KEY.pbis"
+    gpgkey: "https://repo.pbis.beyondtrust.com/yum/RPM-GPG-KEY-pbis"
 
 - name: Ensure {{ pbis_repo_description }} is installed
   become: yes
