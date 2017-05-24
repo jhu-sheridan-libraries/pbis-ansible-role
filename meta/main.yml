@@ -34,7 +34,9 @@ galaxy_info:
   #   - 99.99
 
   platforms:
-    - Centos 7
+    - name: EL
+      versions:
+      - 7
   galaxy_tags: 
     - "pbis"
     - "powerbroker identity services"
