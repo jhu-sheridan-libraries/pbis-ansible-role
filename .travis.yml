@@ -16,6 +16,7 @@ script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
 
+#trigger ansible galaxy
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
     
