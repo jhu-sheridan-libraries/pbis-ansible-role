@@ -26,6 +26,8 @@
     gpgkey: "https://repo.pbis.beyondtrust.com/yum/RPM-GPG-KEY-pbis"
   notify: yum clean all
 
+- meta: flush_handlers
+
 - name: Ensure {{ pbis_repo_description }} is installed
   become: yes
   yum:
