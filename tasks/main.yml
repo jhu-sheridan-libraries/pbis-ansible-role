@@ -15,6 +15,10 @@
     "pbis_repo_description": "PBIS Open"
   when: is_enterprise == 'false'
 
+- name: Run yum clean all
+  become: yes
+  command: yum clean all
+
 - name: Ensure YUM repo exists
   become: yes
   yum_repository:
