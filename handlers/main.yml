@@ -1,2 +1,6 @@
 ---
 # handlers file for pbis-ansible-role
+- name: yum clean all
+  become: yes
+  command: yum clean all
+  

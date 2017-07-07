@@ -24,10 +24,7 @@
     enabled: yes
     gpgcheck: yes
     gpgkey: "https://repo.pbis.beyondtrust.com/yum/RPM-GPG-KEY-pbis"
-
-- name: Run yum clean all
-  become: yes
-  command: yum clean all
+  notify: yum clean all
 
 - name: Ensure {{ pbis_repo_description }} is installed
   become: yes
