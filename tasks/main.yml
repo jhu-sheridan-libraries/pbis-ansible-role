@@ -15,10 +15,6 @@
     "pbis_repo_description": "PBIS Open"
   when: is_enterprise == 'false'
 
-- name: Run yum clean all
-  become: yes
-  command: yum clean all
-
 - name: Ensure YUM repo exists
   become: yes
   yum_repository:
@@ -28,6 +24,10 @@
     enabled: yes
     gpgcheck: yes
     gpgkey: "https://repo.pbis.beyondtrust.com/yum/RPM-GPG-KEY-pbis"
+
+- name: Run yum clean all
+  become: yes
+  command: yum clean all
 
 - name: Ensure {{ pbis_repo_description }} is installed
   become: yes
