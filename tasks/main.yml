@@ -29,4 +29,5 @@
   become: yes
   yum:
     name: "{{ pbis_package_name }}"
+    update_cache: yes
     state: latest
