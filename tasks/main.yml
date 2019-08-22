@@ -34,3 +34,9 @@
     name: "{{ pbis_package_name }}"
     update_cache: yes
     state: latest
+
+- name: Join to the domain
+  become: yes
+  command: "/opt/pbis/bin/domainjoin-cli join --ou {{pbis_join_ou}} {{pbis_domain}} {{pbis_join_user}} '{{pbis_join_pass}}'"
+
+

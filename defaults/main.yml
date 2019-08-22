@@ -10,3 +10,17 @@
 
 # enterprise = "PBIS Enterprise", open = "PBIS Open"
 "pbis_repo_description": "PBIS Enterprise"
+
+# pbis_domain: the domain to join.  MUST BE SET EXTERNALLY
+pbis_domain: "" 
+
+# pbis_join_ou: the ou in the AD to join. MUST BE SET EXTERNALLY
+pbis_join_ou: ""
+
+# pbis_join_user: user to use to join to the domain
+pbis_join_user: "{{win_svc_acct}}"
+
+# pbis_join_pass: password for the above service account.
+pbis_join_pass: "{{win_svc_pass}}"
+
+
