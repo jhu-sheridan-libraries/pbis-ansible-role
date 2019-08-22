@@ -15,6 +15,18 @@ Role Variables
   - Install PBISE or PBISO
   - Default: yes
 
+- pbis_domain: 
+  - The domain to join.  MUST BE SET EXTERNALLY (ie. via a vault)
+
+- pbis_join_ou:
+  - The OU within the domain to join into. MUST BE SET EXTERNALLY (ie. via a vault)
+
+- pbis_join_user: 
+  - The user with join perms. MUST BE SET EXTERNALLY (ie. via a vault)
+
+- pbis_join_pass: 
+  - The pass for the above user. MUST BE SET EXTERNALLY (ie. via a vault)
+
 Dependencies
 ------------
 
